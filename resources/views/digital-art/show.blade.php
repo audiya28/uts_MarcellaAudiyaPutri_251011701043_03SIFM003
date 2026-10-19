@@ -76,11 +76,6 @@
                 &larr; Kembali ke Produk
             </a>
 
-            {{-- PEMBELIAN --}}
-            <a href="{{ route('orders.create', $artwork->id) }}"
-               class="btn btn-pink rounded-pill px-4 py-2 mt-2">
-                Beli Sekarang
-            </a>
 
         </div>
 

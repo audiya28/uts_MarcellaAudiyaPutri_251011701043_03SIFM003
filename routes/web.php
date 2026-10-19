@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Models\DigitalArt;
 
@@ -33,16 +32,3 @@ Route::get('/produk', function () {
     return view('produk', compact('artworks'));
 })->name('produk');
 
-// Formulir pembelian
-Route::get('/beli/{id}', [OrderController::class, 'create'])
-    ->whereNumber('id')
-    ->name('orders.create');
-
-// Menyimpan pembelian
-Route::post('/beli/{id}', [OrderController::class, 'store'])
-    ->whereNumber('id')
-    ->name('orders.store');
-
-// Riwayat pembelian
-Route::get('/riwayat-pembelian', [OrderController::class, 'history'])
-    ->name('orders.history');

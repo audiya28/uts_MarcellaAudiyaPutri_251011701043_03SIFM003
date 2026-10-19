@@ -35,12 +35,6 @@
                 </a>
 
                 
-                <a
-                class="nav-link {{ request()->routeIs('orders.history') ? 'active' : '' }}"
-                href="{{ route('orders.history') }}"
-                 >
-                Riwayat Pembelian
-                </a>
 </li>
             </div>
         </div>
